@@ -1,0 +1,52 @@
+{
+    "name": "test-clymatecolor",
+    "displayName": "test-clymatecolor",
+    "description": "placeholder",
+    "version": "0.0.1",
+    "publisher":"clydedsouza",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/clydedz/"
+      },
+      "keywords": [
+        "Theme",
+        "Dark Theme",
+        "Light Theme",
+        "Night Owl",
+        "Night Theme",
+        "Light Owl",
+        "Snow Owl",
+        "Early Bird",
+        "Accessible Theme"
+      ],
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Test Clymate color",
+                "uiTheme": "vs-dark",
+                "path": "./themes/clymate-theme.color-theme.json"
+            },
+            {
+                "label": "Test Clymate blue contrast",
+                "uiTheme": "vs-dark",
+                "path": "./themes/bluecontrast-theme.color-theme.json"
+            },
+            {
+                "label": "Test Clymate green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/green-theme.color-theme.json"
+            },
+            {
+                "label": "Test Clymate monochrome",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochrome-theme.color-theme.json"
+            }
+        ]
+    }
+}
