@@ -1,0 +1,1 @@
+# clymate-vscode-theme
