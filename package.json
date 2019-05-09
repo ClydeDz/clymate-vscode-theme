@@ -1,0 +1,54 @@
+{
+    "name": "clymate-themes",
+    "displayName": "Clymate Themes for VS Code",
+    "description": "A collection of themes for VS Code under the Clymate themes hood",
+    "version": "0.1.0",
+    "publisher": "clydedsouza",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ClydeDz/clymate-vscode-theme"
+    }, 
+    "keywords": [
+        "Theme",
+        "Dark theme",
+        "VS Code theme",
+        "Clymate",
+        "Clymate themes",
+        "Red theme",
+        "Monochrome",
+        "Pop Neon",
+        "Vintage"
+    ],
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "icon": "icon.png",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Clymate",
+                "uiTheme": "vs-dark",
+                "path": "./themes/clymate-vsdark.color-theme.json"
+            },
+            {
+                "label": "Clymate Pop Neon",
+                "uiTheme": "vs-dark",
+                "path": "./themes/clymate-pop-neon-vsdark.color-theme.json"
+            },
+            {
+                "label": "Clymate Vintage",
+                "uiTheme": "vs-dark",
+                "path": "./themes/clymate-vintage-vsdark.color-theme.json"
+            },
+            {
+                "label": "Clymate Monochrome",
+                "uiTheme": "vs-dark",
+                "path": "./themes/clymate-monochrome-vsdark.color-theme.json"
+            }
+        ]
+    }
+}
