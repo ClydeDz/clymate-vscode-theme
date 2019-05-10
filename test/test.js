@@ -1,5 +1,6 @@
 const assert = require('assert');
 const fs = require('fs');
+const strip = require('strip-json-comments');
 
 describe('confirm all JSON theme files exist', function() {
   let packageJSON = require('./../package.json');
@@ -17,11 +18,18 @@ describe('confirm all JSON theme files exist', function() {
       try {
         console.log("\tchecking file:", themeFiles[fileIndex], "✔️");
         checkPath = fs.readFileSync(require.resolve("./../themes/"+themeFiles[fileIndex]), "utf8");
+
+        
       }
       catch {
         checkPath = '';
       }  
-      assert.equal(checkPath.length > 0, true);
+      
+      // let checkPathContents = JSON.parse((JSON.stringify(strip(checkPath).trim())));  
+      // console.log("checkPathContents");
+      // let testJson = JSON.parse(checkPathContents);
+      // console.log(testJson.type);
+      assert.equal(checkPath.length > 0, true, "");
     }    
   });
 }); 

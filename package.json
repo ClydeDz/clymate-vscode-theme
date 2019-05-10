@@ -57,5 +57,8 @@
     },
     "scripts": {
         "test": "mocha test/test.js"
+    },
+    "dependencies": {
+        "strip-json-comments": "^3.0.1"
     }
 }
