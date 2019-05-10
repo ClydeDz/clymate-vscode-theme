@@ -2,34 +2,55 @@ const assert = require('assert');
 const fs = require('fs');
 const strip = require('strip-json-comments');
 
-describe('confirm all JSON theme files exist', function() {
-  let packageJSON = require('./../package.json');
-  let packageJSONContents = JSON.parse(JSON.stringify(packageJSON));  
-  let allThemes = packageJSONContents.contributes.themes; 
-  let themeFiles = [];
-  for(var files = 0; files < allThemes.length; files++){
-    var filename = allThemes[files].path.substring(allThemes[files].path.lastIndexOf('/')+1);
-    themeFiles.push(filename);
-  } 
-  
-  it('all JSON files must contain content', function() {
-    for(var fileIndex = 0; fileIndex < themeFiles.length; fileIndex++) {
-      var checkPath = null;
-      try {
-        console.log("\tchecking file:", themeFiles[fileIndex], "✔️");
-        checkPath = fs.readFileSync(require.resolve("./../themes/"+themeFiles[fileIndex]), "utf8");
+describe('JSON color themes', function () {
+  var allThemes;
 
-        
+  before(function () {
+    var packageJSON = require('./../package.json');
+    var packageJSONContents = JSON.parse(JSON.stringify(packageJSON));
+    allThemes = packageJSONContents.contributes.themes;
+  });
+
+  it('check if all JSON theme files exist', function () {
+    for (var theme = 0; theme < allThemes.length; theme++) {
+      var checkPath = null;
+      var filename = allThemes[theme].path.substring(allThemes[theme].path.lastIndexOf('/') + 1);
+
+      try {
+        console.log("\t", "[log]", "checking file:", filename, "✔️");
+        checkPath = fs.readFileSync(require.resolve("./../themes/" + filename), "utf8");
       }
       catch {
         checkPath = '';
-      }  
-      
-      // let checkPathContents = JSON.parse((JSON.stringify(strip(checkPath).trim())));  
-      // console.log("checkPathContents");
-      // let testJson = JSON.parse(checkPathContents);
-      // console.log(testJson.type);
-      assert.equal(checkPath.length > 0, true, "");
-    }    
+        console.log("\t", "[log]", "error while checking file:", filename, "❌");
+      }
+      assert.equal(checkPath.length > 0, true, "file must exist and must contain content");
+    }
+  });
+
+  it('check if the theme type, a.k.a. dark or light, is applied correctly', function () {
+    for (var theme = 0; theme < allThemes.length; theme++) {
+      var filename = allThemes[theme].path.substring(allThemes[theme].path.lastIndexOf('/') + 1);
+      var setTheme = allThemes[theme].uiTheme == "vs" ? "light" : "dark";
+      var appliedTheme;
+
+      try {
+        console.log("\t", "[log]", "reading file:", filename, "✔️");
+        var themeFileContents = fs.readFileSync(require.resolve("./../themes/" + filename), "utf8");
+        var themeFileContentsJSON = JSON.parse( //Need to add an extra JSON.parse to properly convert to JSON
+          JSON.parse(
+            JSON.stringify(
+              strip(themeFileContents).trim()
+            )));
+        appliedTheme = themeFileContentsJSON.type;
+        console.log("\t\t", "[log]", "detected theme:", appliedTheme == "light" ? "☀️": "🌙");
+      }
+      catch {
+        appliedTheme = '';
+        console.log("\t", "[log]", "error while reading file:", filename, "❌");
+      }
+
+      assert.equal(appliedTheme == setTheme, true, "`uitheme` for each theme in package.json must match the property `type` in the theme color JSON file");
+    }
   });
 }); 
