@@ -3,6 +3,7 @@ const fs = require('fs');
 const stripComments = require('strip-json-comments');
 
 describe('JSON color themes', function () {
+  console.log("[test]", this.title);
   var allThemes;
 
   before(function () {
@@ -12,6 +13,7 @@ describe('JSON color themes', function () {
   });
 
   it('check if all JSON theme files exist', function () {
+    console.log("  ", "[test]", this.test.title);
     for (var theme = 0; theme < allThemes.length; theme++) {
       var checkPath = null;
       var filename = allThemes[theme].path.substring(allThemes[theme].path.lastIndexOf('/') + 1);
@@ -29,6 +31,7 @@ describe('JSON color themes', function () {
   });
 
   it('check if the theme type, a.k.a. dark or light, is applied correctly', function () {
+    console.log("  ", "[test]", this.test.title);
     for (var theme = 0; theme < allThemes.length; theme++) {
       var filename = allThemes[theme].path.substring(allThemes[theme].path.lastIndexOf('/') + 1);
       var setTheme = allThemes[theme].uiTheme == "vs" ? "light" : "dark";
