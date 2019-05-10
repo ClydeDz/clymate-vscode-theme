@@ -54,12 +54,10 @@
     "devDependencies": {
         "chai": "^4.2.0",
         "mocha": "^6.1.4",
-        "mocha-junit-reporter": "^1.22.0"
+        "mocha-junit-reporter": "^1.22.0",
+        "strip-json-comments": "^3.0.1"
     },
     "scripts": {
         "test": "mocha test/test.js --reporter mocha-junit-reporter --timeout 10000 --exit"
-    },
-    "dependencies": {
-        "strip-json-comments": "^3.0.1"
     }
 }
