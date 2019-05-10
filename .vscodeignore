@@ -4,3 +4,4 @@ test/**
 .vscode/**
 .gitignore
 .yo-rc.json
+test-results.xml
