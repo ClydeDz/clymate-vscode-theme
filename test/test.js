@@ -43,7 +43,7 @@ describe('JSON color themes', function () {
               stripComments(themeFileContents).trim()
             )));
         appliedTheme = themeFileContentsJSON.type;
-        console.log("\t\t", "[log]", "detected theme:", appliedTheme == "light" ? "☀️": "🌙");
+        console.log("\t\t", "[log]", "detected theme:", appliedTheme == "light" ? "☀️" : "🌙");
       }
       catch {
         appliedTheme = '';
