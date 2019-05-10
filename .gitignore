@@ -329,5 +329,8 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
-# Exclude mocha junit reporter test result file
+# Mocha junit reporter test result file
 test-results.xml
+
+# VSIX packages
+*.vsix
