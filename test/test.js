@@ -1,6 +1,6 @@
 const assert = require('assert');
 const fs = require('fs');
-const strip = require('strip-json-comments');
+const stripComments = require('strip-json-comments');
 
 describe('JSON color themes', function () {
   var allThemes;
@@ -40,7 +40,7 @@ describe('JSON color themes', function () {
         var themeFileContentsJSON = JSON.parse( //Need to add an extra JSON.parse to properly convert to JSON
           JSON.parse(
             JSON.stringify(
-              strip(themeFileContents).trim()
+              stripComments(themeFileContents).trim()
             )));
         appliedTheme = themeFileContentsJSON.type;
         console.log("\t\t", "[log]", "detected theme:", appliedTheme == "light" ? "☀️": "🌙");
