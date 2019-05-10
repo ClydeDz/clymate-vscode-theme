@@ -1,3 +1,6 @@
-.vscode/**
 demos/**
+node_modules/**
+test/**
+.vscode/**
 .gitignore
+.yo-rc.json
