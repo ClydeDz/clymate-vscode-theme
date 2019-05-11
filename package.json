@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "publisher": "clydedsouza",
     "license": "MIT",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/ClydeDz/clymate-vscode-theme"
