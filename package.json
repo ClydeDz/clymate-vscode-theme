@@ -2,16 +2,17 @@
     "name": "clymate-themes-vscode",
     "displayName": "Clymate Themes for VS Code",
     "description": "A collection of themes for VS Code under the Clymate themes hood.",
-    "version": "0.3.0",
+    "version": "1.0.0",
     "publisher": "clydedsouza",
     "license": "MIT",
-    "preview": true,
+    "preview": false,
     "repository": {
         "type": "git",
         "url": "https://github.com/ClydeDz/clymate-vscode-theme"
     },
     "keywords": [
         "Theme",
+        "Themes",
         "Dark theme",
         "VS Code theme",
         "Clymate",
