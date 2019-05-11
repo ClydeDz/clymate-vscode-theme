@@ -8,13 +8,23 @@ Is a collection of themes for VS Code under the Clymate themes hood.
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/clydedsouza.clymate-themes-vscode.svg?color=990000)](https://marketplace.visualstudio.com/items?itemName=clydedsouza.clymate-themes-vscode) 
 [![GitHub](https://img.shields.io/github/license/clydedz/clymate-vscode-theme.svg)](https://github.com/ClydeDz/clymate-vscode-theme)     
     
-    
+## Screenshots
+### Clymate theme for VS Code   
+![Clymate theme for VS Code](https://raw.githubusercontent.com/ClydeDz/clymate-vscode-theme/master/images/clymate-v1.0.0.png)    
+   
+### Clymate Pop Neon theme for VS Code 
+![Clymate Pop Neon theme for VS Code](https://raw.githubusercontent.com/ClydeDz/clymate-vscode-theme/master/images/pop-neon-v1.0.0.png)   
+   
+### Clymate Monochrome theme for VS Code 
+![Clymate Monochrome theme for VS Code](https://raw.githubusercontent.com/ClydeDz/clymate-vscode-theme/master/images/monochrome-v1.0.0.png)       
+     
+### Clymate Vintage theme for VS Code 
+![Clymate Vintage theme for VS Code](https://raw.githubusercontent.com/ClydeDz/clymate-vscode-theme/master/images/vintage-v1.0.0.png)    
 
-> TODO: Add screenshots here.  
 
 ## Release notes   
 Refer to the detailed release notes found [here](https://github.com/ClydeDz/clymate-vscode-theme/releases).   
 
 ## Credits  
-Clymate Themes for VS Code  (c) 2019 [Clyde D'Souza](https://clydedsouza.net)  
+Clymate Themes for VS Code (c) 2019 [Clyde D'Souza](https://clydedsouza.net)  
 
